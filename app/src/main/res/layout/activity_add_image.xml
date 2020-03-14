@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddImage">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@color/colorPrimary"
+            android:scaleType="centerCrop"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding_8dp"
+            android:text="Add Image for your post by clicking on colored box"/>
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Title"
+            android:padding="16dp"
+            android:textAlignment="textStart"
+            android:inputType="textMultiLine"
+            android:layout_marginTop="@dimen/padding_8dp"/>
+
+        <EditText
+            android:id="@+id/sp_name"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:hint="Detail about post"
+            android:padding="16dp"
+            android:background="@drawable/et_background_round"
+            android:textAlignment="textStart"
+            android:gravity="start"
+            android:inputType="textMultiLine"
+            android:layout_marginTop="@dimen/padding_8dp"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="4sp"
+            android:layout_margin="@dimen/padding_8dp"
+            app:cardUseCompatPadding="true"
+            app:cardCornerRadius="@dimen/padding_8dp">
+            <Button
+                android:id="@+id/save"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/notosans"
+                android:background="@color/colorPrimaryDark"
+                android:textColor="@color/white"
+                android:textAllCaps="false"
+                android:text="Add Post"/>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+    <!--Created By Arun-->
+
+
+</androidx.core.widget.NestedScrollView>

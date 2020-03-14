@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_user"
+    android:layout_width="match_parent"
+    android:background="#191B30"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:scaleType="centerCrop"
+        android:contentDescription="@string/app_name" />
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:padding="@dimen/padding_8dp"
+        android:layout_margin="@dimen/padding_8dp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/helvetica"
+        android:textStyle="bold"
+        android:background="@drawable/et_background"
+        android:text="12/09/2019"
+        android:textSize="12sp" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#AA000000"
+        android:layout_below="@+id/image"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:padding="@dimen/padding_8dp"
+            android:textSize="18sp"
+            android:text="Arun Kumar"
+            android:fontFamily="@font/helvetica"
+            android:textColor="@color/colorPrimary" />
+
+
+        <TextView
+            android:id="@+id/detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/helvetica"
+            android:justificationMode="inter_word"
+            android:lineSpacingExtra="6sp"
+            android:padding="@dimen/padding_8dp"
+            android:text="By Arun Kumar"
+            android:textColor="@color/white" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/padding_8dp"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:tint="@color/white"
+            android:padding="@dimen/padding_8dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="@dimen/padding_8dp"
+            android:layout_marginRight="@dimen/padding_8dp"
+            android:background="@drawable/et_background_icon"
+            android:src="@mipmap/like"/>
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:tint="@color/white"
+            android:padding="@dimen/padding_8dp"
+            android:background="@drawable/et_background_icon"
+            android:layout_weight="1"
+            android:layout_marginLeft="@dimen/padding_8dp"
+            android:layout_marginRight="@dimen/padding_8dp"
+            android:src="@mipmap/comment"/>
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:tint="@color/white"
+            android:padding="@dimen/padding_8dp"
+            android:layout_weight="1"
+            android:background="@drawable/et_background_icon"
+            android:layout_marginLeft="@dimen/padding_8dp"
+            android:layout_marginRight="@dimen/padding_8dp"
+            android:src="@mipmap/share"/>
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

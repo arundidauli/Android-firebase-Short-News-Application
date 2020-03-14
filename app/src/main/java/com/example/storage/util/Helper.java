@@ -11,6 +11,10 @@ import android.widget.ProgressBar;
 
 import com.example.storage.R;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+
 public class Helper {
 	private static Dialog mDialog;
 	public static ProgressDialog mProgressDialog;
@@ -57,5 +61,14 @@ public class Helper {
 		if (mProgressDialog != null && mProgressDialog.isShowing()) {
 			mProgressDialog.dismiss();
 		}
+	}
+
+	public static String get_date(){
+		Date c = Calendar.getInstance().getTime();
+		System.out.println("Current time => " + c);
+
+		SimpleDateFormat df = new SimpleDateFormat("dd-MMM-yyyy");
+		String formattedDate = df.format(c);
+		return formattedDate;
 	}
 }

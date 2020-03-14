@@ -1,29 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest package="com.example.storage"
-		  xmlns:android="http://schemas.android.com/apk/res/android"
-		  android:installLocation="auto">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.storage"
+    android:installLocation="auto">
 
-	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
 
-	<application
-		android:allowBackup="true"
-		android:hardwareAccelerated="true"
-		android:icon="@mipmap/ic_launcher"
-		android:label="@string/app_name"
-		android:supportsRtl="true"
-		android:theme="@style/AppTheme">
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher1"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".UserDetailActivity"></activity>
+        <activity android:name=".AddImage" />
+        <activity android:name=".ImagePickerActivity" />
+        <activity android:name=".UserListActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-		<activity android:name=".MainActivity">
-			<intent-filter>
-				<action android:name="android.intent.action.MAIN"/>
-
-				<category android:name="android.intent.category.LAUNCHER"/>
-			</intent-filter>
-		</activity>
-		<activity android:name=".UploadActivity"/>
-		<activity android:name=".DownloadActivity"/>
-		<activity android:name=".CloudStorageActivity">
-		</activity>
-	</application>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".UploadActivity" />
+        <activity android:name=".DownloadActivity" />
+        <activity android:name=".CloudStorageActivity" />
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:screenOrientation="fullSensor"
+            android:theme="@style/AppTheme" /> <!-- cache directory file provider paths -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+    </application>
 
 </manifest>
